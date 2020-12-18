@@ -1,3 +1,4 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
 
 // Mongo connection 
@@ -20,6 +21,4 @@ db.on('error', (error) => {
     console.log(`Databse error \n ${error}`);
 });
 
-
-const User =  require('./User');
-module.exports = User;
+module.exports.User = require('./User');
